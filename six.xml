@@ -136,9 +136,6 @@ description="JIRA Server Dashboard Description">
         // Call fetchData() when gadget loads.
         gadgets.util.registerOnLoadHandler(fetchData);
       </script>
-
-
-
   ]]>
 </Content>
   

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
 <ModulePrefs
-title="MInov6.8 example of JIRA Server Dashboard Gadget"
+title="MInov6.10 example of JIRA Server Dashboard Gadget"
 author="Raul Pelaez raulpelaez@mraddon.com www.mraddon.com"
 thumbnail="https://route_to_.png"
 screenshot="https://route_to.png"
@@ -61,7 +61,6 @@ description="JIRA Server Dashboard Description">
           document.getElementById("main").appendChild(nameNode);
           document.getElementById("main").appendChild(document.createElement("br"));
 
-
           var bodyNode = document.createElement("div");
           bodyNode.innerHTML = result.table;
           document.getElementById("main").appendChild(bodyNode);
@@ -78,10 +77,6 @@ description="JIRA Server Dashboard Description">
           gadgets.io.makeRequest(url, function (response) {
               showOneSection('main');
               showResults(response.data);
-              var main = document.getElementById('main');
-              var err = document.createTextNode('OAuth error: ' +
-                response.oauthError + ': ' + response.oauthErrorText);
-              main.appendChild(err);
                      }, params);
         }
         // Call fetchData() when gadget loads.

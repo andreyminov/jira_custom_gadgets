@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs
+title="MInov6 example of JIRA Server Dashboard Gadget"
+author="Raul Pelaez raulpelaez@mraddon.com www.mraddon.com"
+thumbnail="https://route_to_.png"
+screenshot="https://route_to.png"
+description="JIRA Server Dashboard Description">
+ 
+<Require feature="minimessage" />
+<Require feature="dynamic-height" />
+<Require feature="auth-refresh"/>
+<Require feature="oauthpopup" />
+<Require feature="setprefs" />
+<Require feature="settitle" />
+<Require feature="core" />
+<Require feature="core.io" />
+<Require feature="views" />
+<Optional feature="atlassian.util" />
+<Optional feature="gadget-directory">
+<Param name="categories">Other</Param>
+</Optional>
+</ModulePrefs>
+ 
+<Content type="html" view="profile">
+    <![CDATA[
+    #requireResource("com.atlassian.jira.gadgets:common")
+    #includeResources()
+
+    <h1>Hello from the Atlassian Gadget Tutorial!</h1>
+
+    <script type="text/javascript">
+        (function () {
+            var gadget = AJS.Gadget({
+                baseUrl: "https://jira.ips.su",
+                useOauth: "/rest/gadget/1.0/currentUser",
+                view: {}
+            });
+        })();
+    </script>
+    ]]>
+</Content>
+  
+</Module>

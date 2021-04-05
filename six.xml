@@ -77,11 +77,8 @@ description="JIRA Server Dashboard Description">
           params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
 
           gadgets.io.makeRequest(url, function (response) {
-              var personalize = document.getElementById('personalize');
-              personalize.onclick = popup.createOpenerOnClick();
-              var approvaldone = document.getElementById('approvaldone');
-              approvaldone.onclick = popup.createApprovedOnClick();
-              showOneSection('approval');
+              showOneSection('main');
+              showResults(response.data);
                      }, params);
         }
         // Call fetchData() when gadget loads.

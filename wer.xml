@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
 <ModulePrefs
-title="MInov example of JIRA Server Dashboard Gadget"
+title="MInov2 example of JIRA Server Dashboard Gadget"
 author="Raul Pelaez raulpelaez@mraddon.com www.mraddon.com"
 thumbnail="https://route_to_.png"
 screenshot="https://route_to.png"
@@ -28,12 +28,12 @@ description="JIRA Server Dashboard Description">
 <script>
 function refresh() {
 jQuery.ajax({
- url: "https://coinmarketcap-nexuist.rhcloud.com/api/eth",
+ url: "https://jira.ips.su/rest/api/2/issue/UCS-2323",
  type: "GET",
  
  contentType: 'application/json; charset=utf-8',
  success: function(json) {
- document.getElementById("eth").innerHTML= json.price.eur;
+ document.getElementById("assignee").innerHTML= name;
   
  },
  error : function(jqXHR, textStatus, errorThrown) {

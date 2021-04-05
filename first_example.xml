@@ -49,7 +49,7 @@ refresh();
 <tr>
 <td><b>ETH</b></td>
 <td><font align="right" color="#7c06b7">
-<div id="eth">€</div>
+<div id="eth">$</div>
 </font></td>
 </tr>
 </table>

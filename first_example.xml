@@ -28,7 +28,7 @@ description="JIRA Server Dashboard Description">
 <script>
 function refresh() {
 jQuery.ajax({
- url: "https://coinmarketcap-nexuist.rhcloud.com/api/eth",
+ url: "https://yandex.ru/news/quotes/2002.html",
  type: "GET",
  
  contentType: 'application/json; charset=utf-8',

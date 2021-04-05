@@ -32,7 +32,7 @@ description="JIRA Server Dashboard Description">
     <script type="text/javascript">
 (function () {
     var gadget = AJS.Gadget({
-        baseUrl: "https://jira.ips.su",
+        baseUrl: "__ATLASSIAN_BASE_URL__",
         useOauth: "/rest/gadget/1.0/currentUser",
         view: {
             template: function(args) {

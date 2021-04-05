@@ -73,12 +73,15 @@ description="JIRA Server Dashboard Description">
           url = url + escape("assignee = currentUser() AND resolution = unresolved ORDER BY priority DESC, created ASC");
 
           params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
-          params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.OAUTH;
           params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
 
           gadgets.io.makeRequest(url, function (response) {
               showOneSection('main');
               showResults(response.data);
+              var main = document.getElementById('main');
+              var err = document.createTextNode('OAuth error: ' +
+                response.oauthError + ': ' + response.oauthErrorText);
+              main.appendChild(err);
                      }, params);
         }
         // Call fetchData() when gadget loads.

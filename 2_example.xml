@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
 <ModulePrefs
-title="MrAddon example of JIRA Server Dashboard Gadget"
+title="ANMI example of JIRA Server Dashboard Gadget"
 author="Raul Pelaez raulpelaez@mraddon.com www.mraddon.com"
 thumbnail="https://jira.ips.su/secure/projectavatar?pid=12700&avatarId=13001"
 screenshot="https://route_to.png"

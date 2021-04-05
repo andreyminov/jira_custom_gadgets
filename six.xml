@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
 <ModulePrefs
-title="MInov6.10 example of JIRA Server Dashboard Gadget"
+title="Minov 6.10 example of JIRA Server Dashboard Gadget"
 author="anmi"
 thumbnail="https://route_to_.png"
 screenshot="https://route_to.png"
@@ -84,5 +84,5 @@ description="JIRA Server Dashboard Description">
       </script>
   ]]>
 </Content>
-  
+ 
 </Module>

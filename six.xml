@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
 <ModulePrefs
-title="MInov6.6 example of JIRA Server Dashboard Gadget"
+title="MInov6.7 example of JIRA Server Dashboard Gadget"
 author="Raul Pelaez raulpelaez@mraddon.com www.mraddon.com"
 thumbnail="https://route_to_.png"
 screenshot="https://route_to.png"
@@ -24,9 +24,6 @@ description="JIRA Server Dashboard Description">
  
 <Content type="html">
   <![CDATA[
-      <!-- shindig oauth popup handling code -->
-      <script src="http://svn.atlassian.com/svn/public/contrib/tutorials/jira-standalone-jql-gadget/static/js/popup.js"></script>
-
       <div id="main" style="display: none">
       </div>
 
@@ -42,18 +39,6 @@ description="JIRA Server Dashboard Description">
       </div>
 
       <script type="text/javascript">
-        // Display UI depending on OAuth access state of the gadget (see <divs> above).
-        // If user hasn't approved access to data, provide a "Personalize this gadget" link
-        // that contains the oauthApprovalUrl returned from makeRequest.
-        //
-        // If the user has opened the popup window but hasn't yet approved access, display
-        // text prompting the user to confirm that they approved access to data.  The user
-        // may not ever need to click this link, if the gadget is able to automatically
-        // detect when the user has approved access, but showing the link gives users
-        // an option to fetch their data even if the automatic detection fails.
-        //
-        // When the user confirms access, the fetchData() function is invoked again to
-        // obtain and display the user's data.
         function showOneSection(toshow) {
           var sections = [ 'main', 'approval', 'waiting' ];
           for (var i=0; i < sections.length; ++i) {
@@ -82,13 +67,6 @@ description="JIRA Server Dashboard Description">
           document.getElementById("main").appendChild(bodyNode);
         }
 
-        // Invoke makeRequest() to fetch data from the service provider endpoint.
-        // Depending on the results of makeRequest, decide which version of the UI
-        // to ask showOneSection() to display. If user has approved access to their
-        // data, display data.
-        // If the user hasn't approved access yet, response.oauthApprovalUrl contains a
-        // URL that includes a Google-supplied request token. This is presented in the
-        // gadget as a link that the user clicks to begin the approval process.
         function fetchData() {
           var params = {};
           url = "https://jira.ips.su/rest/gadget/1.0/issueTable/jql?jql=";
